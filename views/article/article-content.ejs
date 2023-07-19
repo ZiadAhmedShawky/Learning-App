@@ -1,0 +1,20 @@
+<%-include('../includes/head.ejs')%>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/article.css">
+<link rel="stylesheet" href="/css/pomodoro.css">
+<%-include('../includes/navigation.ejs')%>
+<%-include('../includes/pomodoro.ejs')%>
+<div id="articleContainer" class="article">
+    <div class="container">
+        <%for(let a of article){%>
+            <h1 class="articleName"><%=a.name%></h1>
+            <p class="article-content"><%=a.article%></p>
+            <%}%>
+    </div>
+</div>
+
+
+<script src="/js/script.js"></script>
+<%-include('../includes/end.ejs')%>
+

@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	width: 100%;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom ,#290c0c,#6b2e2e,#4b1c1c);
+    background-image: url("https://institute.careerguide.com/wp-content/uploads/2020/09/happy-elearning.gif");
+    background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mainC{
+	position: absolute;
+	left: 150px;
+    width: 350px;
+    height: 550px;
+    background:#f8e9e9;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #4b1c1c;
+	
+}
+
+#check-box{
+    display: none;
+}
+
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+button{
+    width: 70px;
+    height: 35px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #c88f8f;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top:20px ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+a{
+    display: block;
+    color: #6b2e2e;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+a:hover{
+    color: #290c0c;
+}
+
+label{
+    color: #c88f8f;
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.title:hover{
+    color: #6b2e2e;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #c88f8f;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top:20px ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+
+
+ }
+ button:hover{
+    background: #6b2e2e;
+ }
+
+ .login{
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+ .login label{
+    color: #c88f8f;
+    transform: scale(.6);
+ }
+
+ #check-box:checked ~ .login{
+    transform: translateY(-700px);
+ }
+
+ #check-box:checked ~ .login label{
+    transform: scale(1);
+ }
+
+ #check-box:checked ~ .signup label{
+    transform: scale(.6);
+ }
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+      align-items: flex-start;
+    }
+  
+    .mainC {
+      left: 5px;
+      top: 30px;
+      width: 30%;
+      height: auto;
+    }
+    a{
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    input,
+    button {
+      width: 80%;
+    }
+}
+  
+
+
+
+

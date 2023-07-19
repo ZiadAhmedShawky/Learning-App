@@ -1,0 +1,107 @@
+<%-include('includes/head.ejs')%>
+<link rel="stylesheet" href="/css/pomodoro.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/showCourses.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/main.css">
+
+<link rel="stylesheet" href="css/chat.css">
+
+<%-include('includes/navigation.ejs')%>
+<%-include('includes/search.ejs')%>
+
+<div class="hero vh-100 d-flex align-items-center" id="hero">
+   <div class="container">
+      <div class="row">
+         <div class="col lg-7 mx-auto text-center ">
+         </div>
+         <%if(user){%>
+            <h1 id="username" style="display: inline-block;  font-size: 2.5rem;">Hello, <%=user.name %></h1>
+            <%}%>
+            <h1 class="display-4 text-white">
+               Start your E-learning trip without distractions
+            </h1>
+            <p class="text-white">Here you will find different programming cources from A to Z with just one click .</p>
+            <p class="text-white">Start your own project and act like a professional .</p>
+            <p class="text-white">Contact our proffesional mentors with the contact info below</p>
+           <a href="/showCourses" class="btn me-2 btn-primary get-started-main">Get started</a>
+       </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <section class="courses">
+      <div class="box-container">
+         <%for(let course of courses){%>
+            <div class="box">
+               <div class="tutor">
+                  <div class="info">
+                     <h3><%=course.author%></h3>
+                     <span>21-10-2022</span>
+                  </div>
+               </div>
+               <div class="thumb">
+                  <img src="<%=course.img%>" alt="">
+                  <span><%=course.video.length%> videos</span>
+               </div>
+               <h3 class="title"><%=course.courseName%></h3>
+               <a href="/<%=course.slug%>" class="inline-btn">view playlist</a>
+            </div>
+            <%}%>
+         </section>
+         <section id="blog">
+            <div class="container1 ">
+                <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary"> BLOG</h6>
+                    <h1 > LATEST NEWS FROM THE BLOG</h1>
+                    <p>For millions of users. We transform businesses with powerful and adaptable digital solutions that satisfy the needs of today and unlock the opportunities of tomorrow.</p>
+                </div>
+                </div>
+                <div class="row1">
+                    <div class="col-md-4">
+                        <div class="blog-post card-effect">
+                            <img src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1511848673/1511848671.jpg">
+                            <h4>DeveloperWeek Virtual</h4>
+                            <h5>Date: February 15-23, 2023</h5>
+                            <h5>Location: San Francisco Bay, California & Online</h5>
+                            <p>DeveloperWeek is one of the largest expo conferences for developers in the world, with regular attendance of more than 8,000 professionals every year.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="blog-post card-effect">
+                            <img src="https://er.educause.edu/-/media/images/blogs/2020/8/er20_3206_706x394_blog.jpg?hash=6BCDA470A42BF8086319452828355A6BE4BC96CD&la=en">
+                            <h4>QCon</h4>
+                            <h5>Date: October 24-26</h5>
+                            <h5>Location: San Francisco, California</h5>
+                            <p>QCon is an international software development conference that helps software teams adopt new trends and technologies. The event will be back live in San Francisco, with attendees sure to see some major announcements and speakers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="blog-post card-effect">
+                            <img src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1567167428/1567167426.jpg">
+                            <h4>DevOpsCon</h4>
+                            <h5>Date: September 27-30</h5>
+                            <h5>Location: New York City & Online</h5>
+                            <p>DevOps Con is noted as “The Conference” for Continuous Delivery, Microservices, and Lean Business. This year’s event is again hybrid, so it’s your choice whether to attend online or in person in New York.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    <!-- blog-->
+
+
+
+         
+         
+         
+         <%-include('includes/pomodoro.ejs')%>
+         <%-include('includes/chat.ejs')%>
+         <%-include('includes/footer.ejs')%>
+         <script src="js/script.js"></script>
+         <script src="js/chat.js"></script>
+         <%-include('includes/end.ejs')%>
+         

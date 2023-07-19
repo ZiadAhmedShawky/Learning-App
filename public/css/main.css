@@ -1,0 +1,161 @@
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+/*     color: var(--dark);
+ */    font-weight: 700;
+}
+
+.text-white{
+    color: #2c3e50;
+    text-align: center;
+}
+
+
+a {
+     color: var(--dark);
+     text-decoration: none;
+}
+
+ body {
+    font-family: Sora, "sans-serif";
+    line-height: 1.7;
+}
+ 
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+     color: var(--dark);
+     font-weight: 700;
+}
+h1{
+    font-size: 50px;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+p{
+    text-align: center;
+    font-size: 15px;
+}
+.hero {
+    background-image: url('https://edoxi.com/admin/assets/img/studyhub/Advantages_and_Disadvantages_of_Online_Learning.webp');
+    background-position: center;
+    height: 70vh;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+/*     background-color: rgba(21, 20, 51, 0.8);
+ */    z-index: -1;
+}
+
+section{
+    padding-top:  auto ;
+}
+.get-started-main {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+h6{
+    font-size: 45px;
+    text-align: center;
+}
+.col-md-8 h1{
+    text-align: center;
+}
+.col-md-8 p{
+    margin-bottom: 10px;
+    font-weight: 400;
+
+}
+.col-md-4{
+    display: flex;
+    font-size: 10px;
+    width:50%;
+}
+.row1{
+    display: flex;
+    gap: 30px;
+}
+.blog-post img{
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+
+.blog-post p,h5,h4{
+    text-align: center;
+}
+
+
+.card-effect{
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+ .card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+    }
+  
+    .get-started-main {
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    h6 {
+      font-size: 3rem;
+    }
+  
+    .col-md-8 h1 {
+      text-align: left;
+    }
+  
+    .col-md-4 {
+      display: block;
+      width: 100%;
+    }
+  
+    .row1 {
+      flex-direction: column;
+      gap: 20px;
+    }
+}
+  

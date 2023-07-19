@@ -1,0 +1,32 @@
+<%-include('includes/head.ejs')%>
+<link rel="stylesheet" href="/css/pomodoro.css">
+<link rel="stylesheet" href="/css/style.css">
+<%-include('includes/navigation.ejs')%>
+<link rel="stylesheet" href="/css/videoList.css">
+<%-include('includes/pomodoro.ejs')%>
+
+
+<div class="container-video">
+    <div class="playlist">
+        <h1 class="course-playlist">PlayList</h1>
+        <div class="video-player">
+        <%for(let c of course){%>
+            <h1 class="coursename"><%=c.courseName%></h1>
+            </div>
+        <div class="video-list">
+            <%for(let video of c.video){%>
+                <div class="video-item" data-url="<%=video%>">
+                    <video class="small" src="<%=video%>"></video>
+                    <span class="video-title"><%=video%></span>
+                </div>
+            <%}%>
+        </div>
+        <%}%>
+      </div>
+</div>
+<%-include('includes/chat.ejs')%>
+
+<script src="/js/script.js"></script>
+<script src="/js/video.js">
+</script>
+<%-include('includes/end.ejs')%>

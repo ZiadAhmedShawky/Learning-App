@@ -1,0 +1,59 @@
+.playlist {
+    display: flex;
+}
+  
+.video-list {
+    width: 30%;
+    display: inline-block;
+    margin:70px;
+}
+  
+.video-player {
+    width: 70%;
+}
+  
+.video-player video {
+    width: 100%;
+    margin-top: 50px;
+    height: auto;
+    border-radius: 20px;
+}
+
+  
+.video-player.fullscreen {
+    width: 70%;
+    height:70vh;    
+    margin: 15px;
+}
+.video-item{
+    display: flex;
+    width: 100%;
+    gap:15px;
+}
+
+.video-title{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 800;
+    
+}
+.small{
+    justify-content: flex-end;
+    width: 150px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+
+.course-playlist{
+    position: absolute;
+    margin-right: 370px;
+    margin-top: 25px;
+    right: 0;
+}
+.coursename{
+    display:inline-block;
+    margin-top: 10px;
+    font-size: 15px;
+
+}

@@ -1,0 +1,28 @@
+<%-include('../includes/head.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/article.css">
+<link rel="stylesheet" href="/css/pomodoro.css">
+<link rel="stylesheet" href="/css/nav.css">
+<%-include('../includes/navigation.ejs')%>
+<%-include('../includes/pomodoro.ejs')%>
+
+
+<div class="article">
+    <div class="container">
+        <h1 >Articles</h1>
+        <ul id="articleList">
+            <%for(let article of articles){%>
+            <li>
+                <a href="/article/<%=article.name%>"><%=article.name%></a>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<script src="/js/script.js"></script>
+<%-include('../includes/end.ejs')%>
+

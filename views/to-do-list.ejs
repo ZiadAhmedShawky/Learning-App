@@ -1,0 +1,44 @@
+<%-include('includes/head.ejs')%>
+<link rel="stylesheet" href="css/to-do-list.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<%-include('includes/navigation.ejs')%>
+
+<div class="container-to-do-list">
+    <div class="add">
+        <form class="form-Task" action="/task" method="post">
+            <input id="task" class="input" type="text" name="taskName" placeholder="Add Task" autocomplete="off">
+			<button type="submit" class="add-task">Add Task</button>
+        </form>
+    </div>
+	<div class="todo_list">
+        <ul>
+            <% for(let task of tasks) { %>
+			<li class="task" id="<%=task._id%>"><!--TO DO ITEM START-->
+				<button id="task-button" class="delete-button" data-task-id="TASK_ID_HERE"> 🗑️ </button>
+				<label>
+					<input type="checkbox" class="hidden_real_check"/>
+					<div class="todo_element">
+						
+						<span class="customized_ckeck">
+							<span class="checkbox">
+								<span class='internal_one'></span>
+								<span class='internal_two'></span>
+							</span>
+						</span>
+						<span class="element_title"><%=task.taskName%></span>
+					</div>
+				</label>
+			</li><!--TO DO ITEM END-->
+            <%}%>
+			
+		</ul>
+	</div>
+</div>
+<%-include('includes/chat.ejs')%>
+<script src="js/task.js"></script>
+<script src="js/script.js"></script>
+<script src="js/chat.js"></script>
+
+<%-include('includes/end.ejs')%>
+

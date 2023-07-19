@@ -1,0 +1,25 @@
+<%-include('../includes/head.ejs')%>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/addCourses.css">
+<link rel="stylesheet" href="/css/style.css">
+<%-include('../includes/navigation.ejs')%>
+
+<div>
+    <form action="/admin/addCourse" enctype="multipart/form-data"  method="post">
+        <label for="add-course">title</label>
+        <input type="text" name="courseName" >
+        <label for="add-course">image</label>
+        <input type="text" name="img" >
+        <label for="add-course">description</label>
+        <input type="text" name="description" >
+        <label for="add-course">author</label>
+        <input type="text" name="author" >
+        <label for="add-course">track</label>
+        <input type="text" name="track" >
+        <label for="add-course">video</label>
+        <input type="file" id="myFile" name="videos" multiple>
+        <button type="submit">Add Course</button>
+    </form>
+</div>
+<script src="/js/script.js"></script>
+<%-include('../includes/end.ejs')%>
